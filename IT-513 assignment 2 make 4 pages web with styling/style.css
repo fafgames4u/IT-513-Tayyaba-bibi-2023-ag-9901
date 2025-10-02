@@ -1,0 +1,179 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+
+header, footer {
+  background: linear-gradient(to right, #04478fe5, #3488dd);
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+header h1 {
+  margin: 0;
+  
+}
+
+
+footer h2, footer h3 {
+  margin: 0;
+}
+
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 5px 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background: white;
+  color: #0056b3;
+}
+
+
+footer nav ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+
+main {
+  padding: 20px;
+  text-align: left;
+}
+
+main h2, main h3 {
+  margin-top: 0;
+}
+
+
+article {
+  border: 2px solid rgba(62, 52, 52, 0.211);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+ 
+  footer nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+button {
+  background: #095b18;        
+  color: #fff;                
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background: #095b18;        
+}
+
+button:active {
+  background: #095b18;       
+  transform: scale(0.97);     
+}
+
+button[type="reset"] {
+  background: #095b18;        
+}
+
+button[type="reset"]:hover {
+  background: 02420e;
+}
+
+button[type="reset"]:active {
+  background: 02420e;
+}
+table {
+  width: 50%;
+  border-collapse: collapse;   
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #333;     
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+thead tr {
+  background: #000;            
+  color: #fff;                 
+}
+
+tbody tr:nth-child(even) {
+  background: #f4f4f4;         
+}
+
+tbody tr:hover {
+  background: #e1e1e1;         
+}
+
+
