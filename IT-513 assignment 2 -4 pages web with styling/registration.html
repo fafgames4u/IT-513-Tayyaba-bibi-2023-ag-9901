@@ -145,39 +145,7 @@
   </footer>
 
   
-  <script>
-    
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    
-    const pwd = document.getElementById('password');
-    const confirmPwd = document.getElementById('confirm-password');
-    const pwMatch = document.getElementById('pw-match');
-
-    function checkPasswords() {
-      if (!pwd.value && !confirmPwd.value) {
-        pwMatch.textContent = '';
-        return;
-      }
-      if (pwd.value === confirmPwd.value) {
-        pwMatch.textContent = ' ✅ Passwords match';
-      } else {
-        pwMatch.textContent = ' ❌ Passwords do not match';
-      }
-    }
-
-    pwd.addEventListener('input', checkPasswords);
-    confirmPwd.addEventListener('input', checkPasswords);
-
-    // Final check before submit to ensure passwords match
-    document.querySelector('form').addEventListener('submit', function (e) {
-      if (pwd.value !== confirmPwd.value) {
-        e.preventDefault();
-        alert('Passwords do not match. Please correct them before submitting.');
-        confirmPwd.focus();
-      }
-    });
-  </script>
+  
 </body>
 </html>
 
