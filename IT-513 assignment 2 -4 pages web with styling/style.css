@@ -92,6 +92,7 @@ article {
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  border-left: 5px solid rgba(0,0,0,0.2);
   border-radius: 6px;
   background: white;
 }
@@ -137,7 +138,7 @@ button:active {
 }
 
 button[type="reset"] {
-  background: #095b18;        
+  background: #35693f;        
 }
 
 button[type="reset"]:hover {
