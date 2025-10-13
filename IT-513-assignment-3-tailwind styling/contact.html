@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us</title>
+  <meta name="description" content="Contact page for WebDev Course — get in touch, find our location and office hours, or read FAQs." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 font-sans bg-white text-black leading-relaxed">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-500 to-blue-400 text-black p-5 text-center sticky top-0 z-50">
+    <h1 class="text-2xl font-bold">WebDev Course</h1>
+    <nav class="mt-3">
+      <ul class="list-none m-0 p-0 flex justify-center flex-wrap">
+        <li class="mx-3">
+          <a href="Home.html" class="text-white font-bold no-underline px-3 py-2 rounded hover:bg-white hover:text-blue-500">Home</a>
+        </li>
+        <li class="mx-3">
+          <a href="registration.html" class="text-white font-bold no-underline px-3 py-2 rounded hover:bg-white hover:text-blue-500">Registration</a>
+        </li>
+        <li class="mx-3">
+          <a href="products.html" class="text-white font-bold no-underline px-3 py-2 rounded hover:bg-white hover:text-blue-500">Products</a>
+        </li>
+        <li class="mx-3">
+          <a href="contact.html" aria-current="page" class="text-white font-bold no-underline px-3 py-2 rounded hover:bg-white hover:text-blue-500">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6 max-w-5xl mx-auto">
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="text-2xl font-semibold mb-6">Contact Us</h2>
+
+      <!-- Contact Form -->
+      <article class="border-2 border-gray-200 p-5 mb-8 rounded-lg shadow-md bg-white" aria-labelledby="get-in-touch">
+        <h3 id="get-in-touch" class="text-xl font-semibold mb-4">Get in Touch</h3>
+        <p class="mb-4">We'd love to hear from you. Use the form below to send us a message and we'll get back to you as soon as possible.</p>
+
+        <form action="contact-success.html" method="get" class="space-y-4">
+          <p class="text-gray-700 text-sm">Please fill out all required fields (marked with *).</p>
+
+          <div>
+            <label for="contact-name" class="font-semibold">* Your Name</label><br>
+            <input type="text" id="contact-name" name="contact-name" required autocomplete="name" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+
+          <div>
+            <label for="contact-email" class="font-semibold">* Your Email</label><br>
+            <input type="email" id="contact-email" name="contact-email" required autocomplete="email" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+
+          <div>
+            <label for="contact-subject" class="font-semibold">* Subject</label><br>
+            <select id="contact-subject" name="contact-subject" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="">-- Select a subject --</option>
+              <option value="general">General Inquiry</option>
+              <option value="course">Course Information</option>
+              <option value="technical">Technical Support</option>
+              <option value="billing">Billing Question</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="contact-message" class="font-semibold">* Message</label><br>
+            <textarea id="contact-message" name="contact-message" rows="6" required class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+
+          <fieldset class="border border-gray-300 p-3 rounded">
+            <legend class="font-semibold text-gray-800">Preferred contact method</legend>
+            <div class="flex gap-6 mt-2">
+              <label class="flex items-center gap-2">
+                <input type="radio" id="contact-email-method" name="contact-method" value="email" checked class="accent-blue-600">
+                Email
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" id="contact-phone-method" name="contact-method" value="phone" class="accent-blue-600">
+                Phone
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="flex gap-4">
+            <button type="submit" class="bg-[#095b18] text-white font-bold px-4 py-2 rounded hover:bg-green-700 transition">Send Message</button>
+            <button type="reset" class="bg-gray-300 text-black font-semibold px-4 py-2 rounded hover:bg-gray-400 transition">Reset</button>
+          </div>
+        </form>
+      </article>
+
+      <!-- Location -->
+      <article class="border-2 border-gray-200 p-5 mb-8 rounded-lg shadow-md bg-white" aria-labelledby="location-heading">
+        <h3 id="location-heading" class="text-xl font-semibold mb-3">Our Location</h3>
+        <address class="not-italic leading-relaxed">
+          <strong>WebDev Training Center</strong><br>
+          123 Learning Street<br>
+          Tech City, TC 10101<br>
+          Email: <a href="mailto:info@webdevcourse.com" class="text-blue-600 hover:underline">info@webdevcourse.com</a><br>
+          Phone: <a href="tel:+15551234567" class="text-blue-600 hover:underline">(555) 123-4567</a>
+        </address>
+      </article>
+
+      <!-- Hours -->
+      <article class="border-2 border-gray-200 p-5 mb-8 rounded-lg shadow-md bg-white" aria-labelledby="hours-heading">
+        <h3 id="hours-heading" class="text-xl font-semibold mb-3">Office Hours</h3>
+        <table class="w-full border border-gray-700 border-collapse">
+          <thead class="bg-black text-white">
+            <tr>
+              <th class="px-4 py-2 text-left">Day</th>
+              <th class="px-4 py-2 text-left">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="px-4 py-2">Monday - Friday</td>
+              <td class="px-4 py-2">9:00 AM — 6:00 PM</td>
+            </tr>
+            <tr class="bg-gray-100">
+              <td class="px-4 py-2">Saturday</td>
+              <td class="px-4 py-2">10:00 AM — 4:00 PM</td>
+            </tr>
+            <tr class="bg-white">
+              <td class="px-4 py-2">Sunday</td>
+              <td class="px-4 py-2">Closed</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- FAQ -->
+      <article class="border-2 border-gray-200 p-5 mb-8 rounded-lg shadow-md bg-white" aria-labelledby="faq-heading">
+        <h3 id="faq-heading" class="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+
+        <details class="mb-3 border border-gray-300 rounded p-3">
+          <summary class="cursor-pointer font-semibold">What prerequisites do I need for the courses?</summary>
+          <p class="mt-2 text-gray-700">Beginner courses require no prior experience. Intermediate and advanced courses recommend basic computer literacy and familiarity with web browsers.</p>
+        </details>
+
+        <details class="mb-3 border border-gray-300 rounded p-3">
+          <summary class="cursor-pointer font-semibold">How long do I have access to course materials?</summary>
+          <p class="mt-2 text-gray-700">You'll have lifetime access to all course materials once you enroll, including future updates.</p>
+        </details>
+
+        <details class="border border-gray-300 rounded p-3">
+          <summary class="cursor-pointer font-semibold">Do you offer payment plans?</summary>
+          <p class="mt-2 text-gray-700">Yes — we offer flexible payment plans. Contact us to learn about available options.</p>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-500 to-blue-400 text-black p-5 text-center">
+    <p class="mb-2">&copy; <time datetime="2025">2025</time> Web Development Course. All rights reserved.</p>
+    <nav>
+      <ul class="flex justify-center gap-5 list-none m-0 p-0 flex-wrap">
+        <li><a href="index.html" class="text-white font-medium hover:underline">Home</a></li>
+        <li><a href="registration.html" class="text-white font-medium hover:underline">Registration</a></li>
+        <li><a href="products.html" class="text-white font-medium hover:underline">Products</a></li>
+        <li><a href="contact.html" class="text-white font-medium hover:underline">Contact Us</a></li>
+      </ul>
+    </nav>
+    <p class="mt-3 text-sm text-gray-800">This page demonstrates an accessible HTML5 semantic structure with Tailwind CSS styling.</p>
+  </footer>
+</body>
+</html>

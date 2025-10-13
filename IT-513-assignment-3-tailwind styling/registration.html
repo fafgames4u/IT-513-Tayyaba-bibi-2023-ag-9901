@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 font-sans bg-white text-black leading-relaxed">
+
+  <header class="bg-gradient-to-r from-blue-500 to-blue-400 text-black p-5 text-center sticky top-0 z-[1000]">
+    <h1 class="m-0 text-3xl font-bold">WebDev Course</h1>
+    <nav aria-label="Main navigation">
+      <ul class="list-none m-0 p-0 flex justify-center flex-wrap">
+        <li class="mx-4 my-1"><a href="Home.html" class="no-underline text-white font-bold px-4 py-2 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500">Home</a></li>
+        <li class="mx-4 my-1"><a href="registration.html" class="no-underline text-white font-bold px-4 py-2 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500">Registration</a></li>
+        <li class="mx-4 my-1"><a href="products.html" class="no-underline text-white font-bold px-4 py-2 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500">Products</a></li>
+        <li class="mx-4 my-1"><a href="contact.html" class="no-underline text-white font-bold px-4 py-2 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="p-5 text-left">
+    <article aria-labelledby="reg-title" class="border-2 border-gray-300 border-l-[5px] border-l-gray-400 p-6 mb-5 shadow-md rounded-md bg-white">
+      <h2 id="reg-title" class="text-2xl font-semibold mb-4">User Registration</h2>
+
+      <form action="registration-success.html" method="get" novalidate class="space-y-6">
+        <fieldset class="border border-gray-300 p-4 rounded">
+          <legend class="font-semibold text-lg">Personal information</legend>
+
+          <div class="grid md:grid-cols-2 gap-4 mt-2">
+            <p>
+              <label for="first-name" class="font-medium">First name</label><br />
+              <input type="text" id="first-name" name="first-name" required autocomplete="given-name"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+
+            <p>
+              <label for="last-name" class="font-medium">Last name</label><br />
+              <input type="text" id="last-name" name="last-name" required autocomplete="family-name"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+
+            <p>
+              <label for="email" class="font-medium">Email</label><br />
+              <input type="email" id="email" name="email" required autocomplete="email"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+
+            <p>
+              <label for="phone" class="font-medium">Phone</label><br />
+              <input type="tel" id="phone" name="phone" placeholder="+92-300-1234567" inputmode="tel"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset class="border border-gray-300 p-4 rounded">
+          <legend class="font-semibold text-lg">Account information</legend>
+
+          <div class="grid md:grid-cols-2 gap-4 mt-2">
+            <p>
+              <label for="username" class="font-medium">Username</label><br />
+              <input type="text" id="username" name="username" required autocomplete="username"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+
+            <p>
+              <label for="password" class="font-medium">Password</label><br />
+              <input type="password" id="password" name="password" required minlength="8"
+                aria-describedby="pwd-help" autocomplete="new-password"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <small id="pwd-help" class="text-gray-600 text-sm">Minimum 8 characters.</small>
+            </p>
+
+            <p>
+              <label for="confirm-password" class="font-medium">Confirm password</label><br />
+              <input type="password" id="confirm-password" name="confirm-password" required minlength="8"
+                autocomplete="new-password"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <span id="pw-match" aria-live="polite" class="text-sm text-red-600"></span>
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset class="border border-gray-300 p-4 rounded">
+          <legend class="font-semibold text-lg">Additional information</legend>
+
+          <div class="grid md:grid-cols-2 gap-4 mt-2">
+            <p>
+              <label for="birthdate" class="font-medium">Birth date</label><br />
+              <input type="date" id="birthdate" name="birthdate"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </p>
+
+            <p>
+              <label for="course-level" class="font-medium">Course level</label><br />
+              <select id="course-level" name="course-level"
+                class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </p>
+          </div>
+
+          <fieldset class="mt-3 border border-gray-200 p-3 rounded">
+            <legend class="font-medium">Interests</legend>
+            <div class="space-y-1">
+              <div><input type="checkbox" id="frontend" name="interests[]" value="frontend" class="mr-1"><label for="frontend">Frontend Development</label></div>
+              <div><input type="checkbox" id="backend" name="interests[]" value="backend" class="mr-1"><label for="backend">Backend Development</label></div>
+              <div><input type="checkbox" id="fullstack" name="interests[]" value="fullstack" class="mr-1"><label for="fullstack">Full Stack Development</label></div>
+            </div>
+          </fieldset>
+
+          <p class="mt-3">
+            <label for="comments" class="font-medium">Comments</label><br />
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Tell us anything relevant..."
+              class="border border-gray-400 rounded px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          </p>
+        </fieldset>
+
+        <p class="flex flex-wrap justify-center space-x-3">
+  <button 
+    type="submit" class="bg-green-700 text-white font-bold text-sm px-4 py-2 rounded-md hover:bg-green-700 active:scale-95 transition md:text-base md:px-6 md:py-2">
+    Register
+  </button>
+
+  <button 
+    type="reset"  class="bg-green-700 text-white font-bold text-sm px-4 py-2 rounded-md hover:bg-green-700 active:scale-95 transition md:text-base md:px-6 md:py-2">
+    Clear form
+  </button>
+</p>
+
+      </form>
+    </article>
+  </main>
+
+  <footer class="bg-gradient-to-r from-[#04478fe5] to-[#3488dd] text-black p-5 text-center">
+    <p class="m-0">&copy; <span id="year"></span> Web Development Course. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul class="list-none m-3 p-0 flex justify-center gap-5 flex-wrap">
+        <li><a href="index.html" class="no-underline text-white font-medium">Home</a></li>
+        <li><a href="registration.html" class="no-underline text-white font-medium">Registration</a></li>
+        <li><a href="products.html" class="no-underline text-white font-medium">Products</a></li>
+        <li><a href="contact.html" class="no-underline text-white font-medium">Contact Us</a></li>
+      </ul>
+    </nav>
+    <p class="mt-2">This page demonstrates HTML5 semantic structure without CSS styling.</p>
+  </footer>
+
+</body>
+</html>
